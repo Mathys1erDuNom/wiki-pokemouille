@@ -113,7 +113,10 @@ main{
     color: var(--accent);
 }
 
-.card p{
+
+.card p {
+    text-align: justify;
+    text-justify: inter-word;
     color: var(--muted);
 }
 
