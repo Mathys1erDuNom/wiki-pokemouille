@@ -115,7 +115,7 @@ main{
 
 
 .card p {
-    text-align: justify;
+    
     text-align-last: left;
     hyphens: auto;
     color: var(--muted);
