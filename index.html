@@ -1,251 +1,375 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PokéCroco Bot</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PokéCroco Bot — Wiki</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Source+Sans+3:wght@400;600;700&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
+
+  
 </head>
 <body>
 
-    <header class="hero">
-        <div class="overlay"></div>
-        <div class="hero-content">
-            <h1>🐊 PokéCroco Bot</h1>
-            <p class="subtitle">Documentation officielle du bot Discord Pokémon</p>
+<!-- ── HEADER ──────────────────────────────────────── -->
+<header class="site-header">
+  <a class="site-logo" href="#">🐊 PokéCroco<span>Wiki</span></a>
+  <div class="header-sep"></div>
+  <nav class="header-nav">
+    <a href="#fonctionnement">Fonctionnement</a>
+    <a href="#regions">Régions</a>
+    <a href="#evolution">Évolution</a>
+    <a href="#casino">Casino</a>
+    <a href="#commandes">Commandes</a>
+  </nav>
+  <span class="header-version">Version 5G</span>
+</header>
+
+<!-- ── PAGE ────────────────────────────────────────── -->
+<div class="page-wrap">
+
+  <!-- Sidebar gauche -->
+  <aside class="sidebar-left">
+    <div class="nav-section">
+      <div class="nav-section-title">Navigation</div>
+      <a href="#fonctionnement"><span class="nav-icon">⚡</span> Fonctionnement</a>
+      <a href="#regions"><span class="nav-icon">🗺️</span> Régions</a>
+      <a href="#peche"><span class="nav-icon">🎣</span> Pêche</a>
+      <a href="#arenes"><span class="nav-icon">🏅</span> Arènes</a>
+    </div>
+    <div class="nav-divider"></div>
+    <div class="nav-section">
+      <div class="nav-section-title">Systèmes</div>
+      <a href="#evolution"><span class="nav-icon">⬆️</span> Évolution & XP</a>
+      <a href="#objets"><span class="nav-icon">🎒</span> Objets & IVs</a>
+      <a href="#casino"><span class="nav-icon">🎰</span> Casino Dupont</a>
+    </div>
+    <div class="nav-divider"></div>
+    <div class="nav-section">
+      <div class="nav-section-title">Référence</div>
+      <a href="#commandes"><span class="nav-icon">📋</span> Commandes</a>
+      <a href="#nouveautes"><span class="nav-icon">🆕</span> Nouveautés 5G</a>
+    </div>
+  </aside>
+
+  <!-- Contenu principal -->
+  <main class="main-content">
+
+    <!-- Titre de page -->
+    <div class="page-title-bar">
+      <div class="breadcrumb">
+        <a href="#">PokéCroco Wiki</a><span>›</span> Documentation principale
+      </div>
+      <h1>🐊 PokéCroco Bot</h1>
+      <p class="page-subtitle">Bot Discord Pokémon — Documentation officielle complète</p>
+    </div>
+
+    <!-- Infobox flottante -->
+    <aside class="infobox">
+      <div class="infobox-title">PokéCroco Bot</div>
+      <table>
+        <tr><td>Version</td><td><strong>5G</strong></td></tr>
+        <tr><td>Plateforme</td><td>Discord</td></tr>
+        <tr><td>Préfixe</td><td><span class="cmd">!</span></td></tr>
+        <tr><td>Trigger</td><td>Toutes les 20 min</td></tr>
+        <tr><td>Régions</td><td>5 (Gen 1→5)</td></tr>
+        <tr><td>Shiny rate</td><td>1/64 (1/32 région)</td></tr>
+      </table>
+    </aside>
+
+    <!-- Intro -->
+    <p>
+      <b>PokéCroco Bot</b> est un bot Discord dédié à l'univers Pokémon. Lorsqu'un membre est connecté au
+      salon vocal du serveur, des <b>événements</b> se déclenchent toutes les 20 minutes : apparitions de
+      Pokémon, quiz, devinettes ou rencontres avec la famille Dupont. La version 5G introduit le système de
+      régions, la pêche, les arènes, le casino et les IVs.
+    </p>
+
+    <div class="wiki-note">
+      <strong>Note :</strong> Un membre doit être connecté au vocal pour que les événements se déclenchent.
+      Sans connexion, aucun spawn ne se produit.
+    </div>
+
+    <!-- ── NOUVEAUTES ──────────────────────────────── -->
+    <section id="nouveautes" class="wiki-section">
+      <h2><span class="section-num">1</span> Nouveautés de la version 5G</h2>
+      <ul class="update-list">
+        <li><span class="update-icon gold">♻️</span> Reset général des Pokémon <span class="new-badge">reset</span></li>
+        <li><span class="update-icon blue">🌐</span> Arrivée de la 5e génération</li>
+        <li><span class="update-icon blue">🗺️</span> Système de régions avec 5 régions jouables</li>
+        <li><span class="update-icon green">🎣</span> Système de pêche (3 cannes disponibles)</li>
+        <li><span class="update-icon gold">🎰</span> Casino des Dupont (plusieurs mini-jeux)</li>
+        <li><span class="update-icon blue">⬆️</span> Système d'évolution par XP</li>
+        <li><span class="update-icon green">💊</span> Nouveaux objets IV (Protéine, Fer, Carbone)</li>
+      </ul>
+    </section>
+
+    <!-- ── FONCTIONNEMENT ─────────────────────────── -->
+    <section id="fonctionnement" class="wiki-section">
+      <h2><span class="section-num">2</span> Fonctionnement des événements</h2>
+
+      <p>
+        Toutes les <b>20 minutes</b>, si au moins un membre est connecté au vocal, un événement parmi quatre
+        est déclenché aléatoirement. Chaque événement a ses propres règles de participation.
+      </p>
+
+      <div class="event-grid">
+        <div class="event-card">
+          <div class="event-card-head yellow">⚡ Spawn de Pokémon</div>
+          <div class="event-card-body">
+            Un Pokémon sauvage apparaît. Le premier joueur à taper <span class="cmd">!catch</span>
+            tente de le capturer. La capture a <b>75 % de réussite</b> — 1 chance sur 4 que le Pokémon
+            s'échappe de la Poké Ball.
+          </div>
         </div>
-    </header>
+        <div class="event-card">
+          <div class="event-card-head red">🔍 Devinez le Pokémon</div>
+          <div class="event-card-body">
+            Une silhouette s'affiche avec 4 propositions de noms. Une mauvaise réponse élimine le joueur.
+            Le premier à trouver obtient un Pokémon <b>réservé à lui seul</b>.
+          </div>
+        </div>
+        <div class="event-card">
+          <div class="event-card-head blue">❓ Quiz Pokémon</div>
+          <div class="event-card-body">
+            Une question avec 4 réponses possibles. Une erreur élimine le joueur.
+            Le premier à répondre correctement obtient un Pokémon <b>réservé à lui seul</b>.
+          </div>
+        </div>
+        <div class="event-card">
+          <div class="event-card-head green">💰 Événement Dupont</div>
+          <div class="event-card-body">
+            Un membre de la famille Dupont distribue des Croco Dollars. Soyez le premier à
+            cliquer sur le bouton pour empocher la somme.
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <nav>
-        <a href="#nouveautes">Nouveautés</a>
-        <a href="#fonctionnement">Fonctionnement</a>
-        <a href="#regions">Régions</a>
-        <a href="#objets">Objets</a>
-        <a href="#evolution">Évolution</a>
-        <a href="#casino">Casino</a>
-        <a href="#commandes">Commandes</a>
-    </nav>
+    <!-- ── REGIONS ────────────────────────────────── -->
+    <section id="regions" class="wiki-section">
+      <h2><span class="section-num">3</span> Système de régions</h2>
 
-    <main>
+      <p>
+        Chaque joueur peut choisir une région parmi les <b>5 premières générations</b> via la commande
+        <span class="cmd">!region</span>. La région se joue en message privé avec le bot — c'est votre
+        espace personnel pour pêcher et affronter les arènes.
+      </p>
 
-        <section id="nouveautes" class="card">
-            <header class="section-header">
-                <h2>Nouveautés</h2>
-            </header>
+      <h3 id="peche">🎣 Pêche</h3>
 
-            <ul>
-                <li>Gros reset des Pokémon</li>
-                <li>Arrivée de la 5G</li>
-                <li>Système de régions</li>
-                <li>Système de pêche</li>
-                <li>Casino des Dupont</li>
-                <li>Système d'évolution</li>
-                <li>Nouveaux objets IVs</li>
-            </ul>
+      <p>
+        Nécessite une canne à pêche (achetable au shop). Commande : <span class="cmd">!peche</span>
+        (en message privé, depuis votre région). Vous devez être connecté au vocal du serveur.
+        Le résultat arrive entre <b>5 et 15 minutes</b> après le lancer.
+      </p>
 
-        </section>
+      <table class="wiki-table">
+        <thead>
+          <tr>
+            <th>Résultat</th>
+            <th>Canne simple</th>
+            <th>Super Canne</th>
+            <th>Méga Canne</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Rien</td>
+            <td><span class="prob prob-red">40 %</span></td>
+            <td><span class="prob prob-red">40 %</span></td>
+            <td><span class="prob prob-red">40 %</span></td>
+          </tr>
+          <tr>
+            <td>Item</td>
+            <td><span class="prob prob-blue">30 %</span> — items basiques</td>
+            <td><span class="prob prob-blue">30 %</span> — meilleurs items</td>
+            <td><span class="prob prob-blue">30 %</span> — items IV <b>garantis</b></td>
+          </tr>
+          <tr>
+            <td>Pokémon eau (région)</td>
+            <td><span class="prob prob-green">30 %</span></td>
+            <td><span class="prob prob-green">30 %</span></td>
+            <td><span class="prob prob-green">30 %</span></td>
+          </tr>
+        </tbody>
+      </table>
 
-        <section id="fonctionnement" class="card">
-            <h2>Fonctionnement</h2>
+      <h3 id="arenes">🏅 Arènes</h3>
 
-            <p>
-                Si une personne est connectée dans le vocal du serveur, toutes les 20 minutes, un évènement apparaîtra. Il existe 4 évènements différents.
-            </p>
+      <p>
+        Commande : <span class="cmd">!battle</span>. Choisissez un champion et composez votre équipe
+        (6 Pokémon max, tirés de votre Pokédex).
+      </p>
 
-            <div class="grid">
-                <div class="mini-card">
-                    <h3>Spawn de pokémon</h3>
-                    <p>L'évènement classique, un pokémon apparait et le premier à faire la commande "!catch" capturera le pokémon !<br>
-                        à noter qu'une modification à été faite sur la commande catch, en temps normal lancé une pokémon n'a pas 100% de réussite, <br>
-                        dorénavant vous aurez 1 chance sur 4 que le pokémon ne rentre pas dans la pokéball.
-                    </p>
-                </div>
+      <table class="wiki-table">
+        <thead>
+          <tr><th>Situation</th><th>Récompense</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>✅ 1ʳᵉ victoire contre un champion</td>
+            <td><b>Badge</b> + <b>500 Croco Dollars</b> + 20 XP par Pokémon</td>
+          </tr>
+          <tr>
+            <td>✅ Victoire (déjà battu)</td>
+            <td><b>20 Croco Dollars</b> + 20 XP par Pokémon</td>
+          </tr>
+          <tr>
+            <td>❌ Défaite</td>
+            <td>Aucune récompense</td>
+          </tr>
+        </tbody>
+      </table>
 
-                <div class="mini-card">
-                    <h3>Dévine le pokémon</h3>
-                    <p>Une image d'un pokemon apparaitra, 4 propositions de noms seront donnés, si vous vous trompez, le jeux s'arrète pour vous. <br>
-                        Le premier à trouver le nom du pokémon, aura un pokémon qui apparaitra dont il sera le seul à pouvoir le capturer.</p>
-                </div>
+      <div class="wiki-note">
+        <strong>Badges :</strong> Consultez vos badges obtenus avec <span class="cmd">!badge</span>.
+      </div>
 
-                <div class="mini-card">
-                    <h3>Quiz pokémon</h3>
-                    <p>Une question apparaitra, 4 propositions de réponses seront donnés, si vous vous trompez, le jeux s'arrète pour vous.<br>
-                        Le premier à trouver la bonne réponse, aura un pokémon qui apparaitra dont il sera le seul à pouvoir le capturer.</p>
-                </div>
-                <div class="mini-card">
-                    <h3>L'évènement des Dupont</h3>
-                    <p>Vous rencontrerez, un personne de la famille des Dupont (gérant du casio). Ils aurant pour habitude de vous donner de l'argent.<br>
-                        Il faudra être le premier à cliquer sur le bouton pour récupérer l'argent.</p>
-                </div>
-            </div>
-        </section>
+      <h3>✨ Spawn régional</h3>
+      <p>
+        En restant suffisamment longtemps dans le vocal avec une région active, un Pokémon lié à votre
+        région peut apparaître. Ces Pokémon ont un taux de shiny doublé :
+        <span class="prob prob-blue">1/32</span> contre <span class="prob prob-red">1/64</span> normalement.
+      </p>
+    </section>
 
-        <section id="regions" class="card">
-            <h2>Système de régions</h2>
+    <!-- ── EVOLUTION ──────────────────────────────── -->
+    <section id="evolution" class="wiki-section">
+      <h2><span class="section-num">4</span> Évolution & expérience</h2>
 
-            <p>
-                Choisissez votre région avec la commande <strong>!region</strong>.
-                Vous pourrez ensuite choisir votre région parmis les 5 régions des 5 premières générations, vous recevrez un message en Message Privée du bot (la conversation privé avec le bot étant votre région).<br>
-                Il sera aussi possible d'accéder à la pêche si vous possèder une canne. <br>
-                Il sera aussi possible d'affronter les différents champions d'arène de votre région.<br>
-            </p>
+      <p>
+        Tous les Pokémon gagnent de l'XP lors des combats d'arènes (<b>20 XP par Pokémon</b> par victoire).
+        Lorsqu'un Pokémon atteint son seuil d'évolution, il évolue <b>automatiquement</b>.
+      </p>
 
-            <div class="grid">
-                <div class="mini-card">
-                    <h3>Pêche</h3>
-                    <p>
-                        Nécéssite une canne afin de pêcher (achetable dans le shop), pour pêcher "!peche" dans votre région.<br>
-                        Lorsque que vous pêcher il y a trois cas de figure :<br><br>
-                            - Rien (40%)<br><br>
-                            - Vous obtenez un item (les items obtenables sont différents selon la canne que vous utiliser, 30%)<br><br>
-                            - Vous obtenez un pokémon eau de la région dans laquelle vous êtes(30%).<br><br>
-                        Lorsque vous lancez votre canne, vous attendrez entre 5 et 15 min avant de savoir ce que vous avez obtenu. <br><br>
-                        Pour pêcher, vous devez être connecté au vocal du serveur.
-                    </p>
-                </div>
+      <div class="wiki-warning">
+        <strong>⚠️ Important :</strong> Les Pokémon qui ne peuvent plus évoluer (stade final) possèdent
+        également une barre d'XP. En la remplissant, ils gagnent <b>+4 IV</b> dans toutes leurs statistiques.
+      </div>
 
-                <div class="mini-card">
-                    <h3>Arènes</h3>
-                    <p>
-                        Vous pourrez combattre les différents champions d'arène de votre région avec la commande "!battle". <br>
-                        Après avoir choisis votre adversaire, vous devriez choisir votre équipe de maximum 6 pokémons, parmis vos pokémons de votre pokédex.<br>
-                        Si vous gagnez pour la première fois contre un champion d'arène, vous obtiendrez le badge associé, pour voir vos badges ("!badge"),<br>
-                        vous gagnerez aussi une grosse sommes de Croco Dollars (500 Croco dollars). Si vous avez déjà battu un dresseur, vous gagnerez seuelement 20 croco dollars.<br>
+      <h3>Bonus d'évolution</h3>
+      <p>Chaque évolution octroie <b>+4 IV dans toutes les statistiques</b>. Exemple :</p>
 
-                        Chaque victoire contre un dresseur vous fera gagner, 20 xp par pokémon. <br>
+      <div class="evo-chain">
+        <div class="evo-mon">
+          <span class="mon-name">🔥 Salamèche</span>
+          <span class="mon-gain">Stade 1</span>
+        </div>
+        <div class="evo-arrow">→</div>
+        <div class="evo-mon">
+          <span class="mon-name">🔥 Reptincel</span>
+          <span class="mon-gain">+4 IV toutes stats</span>
+        </div>
+        <div class="evo-arrow">→</div>
+        <div class="evo-mon">
+          <span class="mon-name">🔥 Dracaufeu</span>
+          <span class="mon-gain">+4 IV toutes stats</span>
+        </div>
+      </div>
+    </section>
 
-                        Un défaite ne rapporte rien.<br>
-                        
-                    </p>
-                </div>
+    <!-- ── OBJETS ─────────────────────────────────── -->
+    <section id="objets" class="wiki-section">
+      <h2><span class="section-num">5</span> Objets & IVs</h2>
 
-                <div class="mini-card">
-                    <h3>Spawn Pokémon Région</h3>
-                    <p>Si vous venez à rester assez longtemps en vocal, tout en ayant une région, un pokémon apparaitra et vous pourrez le capturer, <br>
-                        le pokémon qui apparaitra aura deux fois plus de chance d'être shiny (1/32)</p>
-                </div>
-            </div>
-        </section>
+      <table class="wiki-table">
+        <thead>
+          <tr><th>Objet</th><th>Effet</th><th>Obtention</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>🎣 Canne</td><td>Pêche basique</td><td>Shop</td></tr>
+          <tr><td>🎣 Super Canne</td><td>Meilleures récompenses de pêche</td><td>Shop</td></tr>
+          <tr><td>🎣 Méga Canne</td><td>Items IV garantis à la pêche</td><td>Shop</td></tr>
+          <tr><td>💊 Protéine</td><td>+4 IV Attaque</td><td>Shop / Pêche</td></tr>
+          <tr><td>🔩 Fer</td><td>+4 IV Défense</td><td>Shop / Pêche</td></tr>
+          <tr><td>⚡ Carbone</td><td>+4 IV Vitesse</td><td>Shop / Pêche</td></tr>
+        </tbody>
+      </table>
+    </section>
 
-        <section id="objets" class="card">
-            <h2>Nouveaux objets</h2>
+    <!-- ── CASINO ─────────────────────────────────── -->
+    <section id="casino" class="wiki-section">
+      <h2><span class="section-num">6</span> Casino des Dupont</h2>
 
-            <div class="grid">
-                <div class="mini-card">
-                    <h3>Canne</h3>
-                    <p>Pêche basique. lk</p>
-                </div>
+      <p>
+        Accessible via <span class="cmd">!casino</span>. Pariez vos Croco Dollars dans les mini-jeux
+        proposés par la famille Dupont.
+      </p>
 
-                <div class="mini-card">
-                    <h3>Super Canne</h3>
-                    <p>Meilleures récompenses.</p>
-                </div>
+      <div class="event-grid">
+        <div class="event-card">
+          <div class="event-card-head yellow">🎨 Devine la couleur</div>
+          <div class="event-card-body">Pariez sur la bonne couleur pour multiplier votre mise.</div>
+        </div>
+        <div class="event-card">
+          <div class="event-card-head red">🃏 Jeux spéciaux</div>
+          <div class="event-card-body">Mini-jeux exclusifs avec règles spécifiques.</div>
+        </div>
+        <div class="event-card">
+          <div class="event-card-head gold" style="background:#fff8e0;color:#5a3800;border-bottom:1px solid #e8c850;">🎰 Jackpot</div>
+          <div class="event-card-body">Tentez de décrocher le jackpot maximum.</div>
+        </div>
+      </div>
+    </section>
 
-                <div class="mini-card">
-                    <h3>Méga Canne</h3>
-                    <p>Items IV garantis.</p>
-                </div>
+    <!-- ── COMMANDES ──────────────────────────────── -->
+    <section id="commandes" class="wiki-section">
+      <h2><span class="section-num">7</span> Référence des commandes</h2>
 
-                <div class="mini-card">
-                    <h3>Protéine</h3>
-                    <p>+4 IV attaque.</p>
-                </div>
+      <table class="wiki-table">
+        <thead>
+          <tr><th>Commande</th><th>Description</th><th>Rôle</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><span class="cmd">!catch</span> / <span class="cmd">!capture</span></td><td>Tenter de capturer un Pokémon apparu</td><td>Joueur</td></tr>
+          <tr><td><span class="cmd">!pokedex</span></td><td>Consulter son Pokédex personnel</td><td>Joueur</td></tr>
+          <tr><td><span class="cmd">!shop</span></td><td>Ouvrir la boutique d'objets</td><td>Joueur</td></tr>
+          <tr><td><span class="cmd">!inventaire</span></td><td>Voir ses objets</td><td>Joueur</td></tr>
+          <tr><td><span class="cmd">!region</span></td><td>Choisir / afficher sa région</td><td>Joueur</td></tr>
+          <tr><td><span class="cmd">!peche</span></td><td>Lancer sa canne à pêche (en DM région)</td><td>Joueur</td></tr>
+          <tr><td><span class="cmd">!battle</span></td><td>Affronter un champion d'arène</td><td>Joueur</td></tr>
+          <tr><td><span class="cmd">!badge</span></td><td>Voir ses badges d'arène</td><td>Joueur</td></tr>
+          <tr><td><span class="cmd">!casino</span></td><td>Accéder au Casino des Dupont</td><td>Joueur</td></tr>
+          <tr><td><span class="cmd">!spawn</span></td><td>Forcer l'apparition d'un Pokémon</td><td>Admin</td></tr>
+          <tr><td><span class="cmd">!quiz</span></td><td>Lancer un quiz manuellement</td><td>Admin</td></tr>
+          <tr><td><span class="cmd">!devine</span></td><td>Lancer une devinette manuellement</td><td>Admin</td></tr>
+          <tr><td><span class="cmd">!event_dupont</span></td><td>Déclencher l'événement Dupont</td><td>Admin</td></tr>
+          <tr><td><span class="cmd">!ban</span> / <span class="cmd">!unban</span></td><td>Bannir ou débannir un joueur</td><td>Admin</td></tr>
+          <tr><td><span class="cmd">!addmoney</span></td><td>Ajouter des Croco Dollars à un joueur</td><td>Admin</td></tr>
+        </tbody>
+      </table>
+    </section>
 
-                <div class="mini-card">
-                    <h3>Fer</h3>
-                    <p>+4 IV défense.</p>
-                </div>
+  </main>
 
-                <div class="mini-card">
-                    <h3>Carbone</h3>
-                    <p>+4 IV vitesse.</p>
-                </div>
-            </div>
-        </section>
+  <!-- Sidebar droite (TOC) -->
+  <aside class="sidebar-right">
+    <div class="toc-title">Sur cette page</div>
+    <ul class="toc-list">
+      <li><a href="#nouveautes">1. Nouveautés 5G</a></li>
+      <li><a href="#fonctionnement">2. Événements</a></li>
+      <li><a href="#regions">3. Régions</a></li>
+      <li class="sub"><a href="#peche">Pêche</a></li>
+      <li class="sub"><a href="#arenes">Arènes</a></li>
+      <li><a href="#evolution">4. Évolution & XP</a></li>
+      <li><a href="#objets">5. Objets & IVs</a></li>
+      <li><a href="#casino">6. Casino</a></li>
+      <li><a href="#commandes">7. Commandes</a></li>
+    </ul>
+  </aside>
 
-        <section id="evolution" class="card">
-            <h2>Système d'évolution</h2>
+</div>
 
-            <p>
-                Les Pokémon gagnent maintenant de l'expérience.
-                Lorsqu'ils atteignent leur XP d'évolution,
-                ils évoluent automatiquement.
-            </p>
-
-            <div class="highlight">
-                Chaque évolution ajoute +4 IV à toutes les statistiques. Les pokémons qui ne peuvent pas ou plus évoluer ont aussi une barre d'XP et lorsqu'ils la remplissent ils gagnent aussi 4 IVs.
-            </div>
-
-            <div class="evolution-chain">
-                Salamèche ➜(+4IVS) Reptincel ➜(+4IVS) Dracaufeu ➜(+4IVS)
-            </div>
-        </section>
-
-       
-
-        <section id="casino" class="card">
-            <h2>Casino des Dupont</h2>
-
-            <p>
-                Gagnez ou perdez vos Croco Dollars dans plusieurs mini-jeux.
-            </p>
-
-            <div class="grid">
-                <div class="mini-card">
-                    <h3>Devine la couleur</h3>
-                </div>
-
-                <div class="mini-card">
-                    <h3>Jeux spéciaux</h3>
-                </div>
-
-                <div class="mini-card">
-                    <h3>Jackpot</h3>
-                </div>
-            </div>
-        </section>
-
-        <section id="commandes" class="card">
-            <h2>Commandes principales</h2>
-
-            <div class="commands">
-                <div>
-                    <h3>Joueurs</h3>
-
-                    <ul>
-                        <li>!catch</li>
-                        <li>!capture</li>
-                        <li>!pokedex</li>
-                        <li>!shop</li>
-                        <li>!inventaire</li>
-                        <li>!region</li>
-                        <li>!peche</li>
-                        <li>!battle</li>
-                        <li>!casino</li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h3>Admin</h3>
-
-                    <ul>
-                        <li>!spawn</li>
-                        <li>!quiz</li>
-                        <li>!devine</li>
-                        <li>!event_dupont</li>
-                        <li>!ban</li>
-                        <li>!unban</li>
-                        <li>!addmoney</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <footer>
-        <p>🐊 PokéCroco Bot - Version 5G</p>
-    </footer>
+<footer>
+  <div class="footer-inner">
+    <strong>🐊 PokéCroco Wiki</strong> — Version 5G &nbsp;·&nbsp;
+    Documentation non officielle rédigée par la communauté &nbsp;·&nbsp;
+    Contenu susceptible d'évoluer
+  </div>
+</footer>
 
 </body>
 </html>
