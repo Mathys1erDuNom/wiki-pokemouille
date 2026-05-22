@@ -60,12 +60,12 @@ const genMeta = {
       const evo = p.evo?.name ?? "—";
   
       const stats = `
-        <span title="PV">❤️ ${p.stats.hp}</span>
-        <span title="Attaque">⚔️ ${p.stats.attack}</span>
-        <span title="Défense">🛡️ ${p.stats.defense}</span>
-        <span title="Atk Spé">✨ ${p.stats.special_attack}</span>
-        <span title="Déf Spé">💫 ${p.stats.special_defense}</span>
-        <span title="Vitesse">💨 ${p.stats.speed}</span>
+        <span title="PV">PV ${p.stats.hp}</span>
+        <span title="Attaque">Attaque ${p.stats.attack}</span>
+        <span title="Défense">Défense ${p.stats.defense}</span>
+        <span title="Atk Spé">Attaque Spéciale ${p.stats.special_attack}</span>
+        <span title="Déf Spé">Défense Spéciale ${p.stats.special_defense}</span>
+        <span title="Vitesse">Vitesse ${p.stats.speed}</span>
       `;
   
       return `
@@ -90,7 +90,7 @@ const genMeta = {
             <th>Types</th>
             <th>Stats</th>
             <th>Attaques</th>
-            <th>XP</th>
+            <th>XP / XP Evo</th>
             <th>Évolution</th>
           </tr>
         </thead>
