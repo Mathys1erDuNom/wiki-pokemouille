@@ -119,7 +119,7 @@ const genMeta = {
     panel.scrollIntoView({ behavior: "smooth", block: "nearest" });
   
     try {
-      const res = await fetch("/json/attaques.json");
+      const res = await fetch("/json/attack_data.json");
       if (!res.ok) throw new Error("Fichier introuvable");
       const data = await res.json();
       renderAttaqueList(data, content);
