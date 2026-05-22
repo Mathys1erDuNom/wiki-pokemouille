@@ -728,3 +728,98 @@
 .type-spectre   { background: #4527a0; }
 .type-electrique  { background: #c79100; }
 .type-fee       { background: #ad1457; }
+
+
+/* ── RESPONSIVE ──────────────────────────────────── */
+
+/* Tablette */
+@media (max-width: 1000px) {
+  .page-wrap { grid-template-columns: 200px 1fr; }
+  .sidebar-right { display: none; }
+
+  .header-nav { display: none; }
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .site-header {
+    padding: 0 14px;
+    gap: 10px;
+    flex-wrap: wrap;
+    height: auto;
+    min-height: 56px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
+  .header-nav { display: none; }
+
+  .site-logo { font-size: 1.1rem; }
+
+  .header-sep { display: none; }
+
+  .header-version { margin-left: auto; }
+
+  .page-wrap {
+    grid-template-columns: 1fr;
+    display: block;
+  }
+
+  .sidebar-left { display: none; }
+
+  .main-content { padding: 16px 14px; }
+
+  /* Infobox : plus de float, pleine largeur */
+  .infobox {
+    float: none;
+    width: 100%;
+    margin: 0 0 16px 0;
+  }
+
+  /* Titres */
+  .page-title-bar h1 { font-size: 1.45rem; }
+
+  /* Event cards : 1 colonne */
+  .event-grid { grid-template-columns: 1fr; }
+
+  /* Tableaux : scroll horizontal */
+  .wiki-table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+  }
+
+  .wiki-table td,
+  .wiki-table th {
+    white-space: normal;
+    min-width: 100px;
+  }
+
+  /* Gen cards : 2 par ligne */
+  .gen-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  .gen-card { width: auto; }
+
+  /* Chaîne d'évolution */
+  .evo-chain {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .evo-arrow {
+    transform: rotate(90deg);
+    padding: 0 0 0 14px;
+  }
+
+  /* Commandes : cmd badge peut wrapper */
+  .cmd { white-space: normal; word-break: break-all; }
+
+  /* Panneau pokémon */
+  .gen-panel-content { max-height: 360px; }
+}
