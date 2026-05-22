@@ -633,3 +633,21 @@
 .type-spectre  { background: #512da8; }
 .type-électrik { background: #fdd835; color: #333; }
 .type-fée      { background: #f48fb1; color: #333; }
+
+.poke-sprite {
+  width: 48px;
+  height: 48px;
+  image-rendering: pixelated;
+}
+
+.poke-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 0.78rem;
+  color: var(--text-muted, #555);
+}
+
+.poke-stats span {
+  white-space: nowrap;
+}

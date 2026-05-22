@@ -5,6 +5,7 @@ const genMeta = {
     gen4: { label: "GEN IV — Sinnoh", file: "/json/pokemon_gen4_normal.json" },
     gen5: { label: "GEN V — Unys",  file: "/json/pokemon_gen5_normal.json" },
   };
+
   
   let currentGen = null;
   
@@ -46,32 +47,51 @@ const genMeta = {
   }
   
   function renderPokemonList(data, container) {
-    if (!data.pokemon || data.pokemon.length === 0) {
+    if (!data || data.length === 0) {
       container.innerHTML = '<div class="gen-error">Aucun Pokémon trouvé.</div>';
       return;
     }
   
-    const rows = data.pokemon.map(p => `
-      <tr>
-        <td class="poke-id">#${String(p.id).padStart(3, "0")}</td>
-        <td><strong>${p.nom}</strong></td>
-        <td>${p.types.map(t => `<span class="type-badge type-${t.toLowerCase()}">${t}</span>`).join(" ")}</td>
-        <td>${p.xp_evo ?? "—"}</td>
-        <td>${p.evolution ?? "—"}</td>
-        <td>${p.shiny ? "✨" : "—"}</td>
-      </tr>
-    `).join("");
+    const rows = data.map(p => {
+      const types = p.type.map(t =>
+        `<span class="type-badge type-${t.toLowerCase()}">${t}</span>`
+      ).join(" ");
+  
+      const evo = p.evo?.name ?? "—";
+  
+      const stats = `
+        <span title="PV">❤️ ${p.stats.hp}</span>
+        <span title="Attaque">⚔️ ${p.stats.attack}</span>
+        <span title="Défense">🛡️ ${p.stats.defense}</span>
+        <span title="Atk Spé">✨ ${p.stats.special_attack}</span>
+        <span title="Déf Spé">💫 ${p.stats.special_defense}</span>
+        <span title="Vitesse">💨 ${p.stats.speed}</span>
+      `;
+  
+      return `
+        <tr>
+          <td><img class="poke-sprite" src="${p.image}" alt="${p.name}"></td>
+          <td><strong>${p.name}</strong></td>
+          <td>${types}</td>
+          <td class="poke-stats">${stats}</td>
+          <td>${p.attacks.join(", ")}</td>
+          <td>${p.current_xp} / ${p.xp_evo}</td>
+          <td>${evo}</td>
+        </tr>
+      `;
+    }).join("");
   
     container.innerHTML = `
       <table class="wiki-table pokemon-table">
         <thead>
           <tr>
-            <th>#</th>
+            <th></th>
             <th>Nom</th>
             <th>Types</th>
-            <th>XP Évo</th>
+            <th>Stats</th>
+            <th>Attaques</th>
+            <th>XP</th>
             <th>Évolution</th>
-            <th>Shiny</th>
           </tr>
         </thead>
         <tbody>${rows}</tbody>
