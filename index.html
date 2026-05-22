@@ -7,6 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="style.css">
+<script src="pokemon.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Source+Sans+3:wght@400;600;700&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
 
   
@@ -360,44 +361,49 @@
     </section>
 
 
+
     <!-- ── POKEMON ────────────────────────────────────── -->
     <section id="pokemon" class="wiki-section">
       <h2><span class="section-num">6</span> Pokémon par génération</h2>
-
       <p>Consultez la liste complète des Pokémon disponibles par génération.</p>
 
       <div class="gen-grid">
-
-        <a class="gen-card" href="/json/gen1.json" target="_blank">
+        <button class="gen-card" onclick="toggleGen('gen1')">
           <div class="gen-card-num">GEN I</div>
           <div class="gen-card-name">Kanto</div>
           <div class="gen-card-range">#001 — #151</div>
-        </a>
-
-        <a class="gen-card" href="/json/gen2.json" target="_blank">
+        </button>
+        <button class="gen-card" onclick="toggleGen('gen2')">
           <div class="gen-card-num">GEN II</div>
           <div class="gen-card-name">Johto</div>
           <div class="gen-card-range">#152 — #251</div>
-        </a>
-
-        <a class="gen-card" href="/json/gen3.json" target="_blank">
+        </button>
+        <button class="gen-card" onclick="toggleGen('gen3')">
           <div class="gen-card-num">GEN III</div>
           <div class="gen-card-name">Hoenn</div>
           <div class="gen-card-range">#252 — #386</div>
-        </a>
-
-        <a class="gen-card" href="/json/gen4.json" target="_blank">
+        </button>
+        <button class="gen-card" onclick="toggleGen('gen4')">
           <div class="gen-card-num">GEN IV</div>
           <div class="gen-card-name">Sinnoh</div>
           <div class="gen-card-range">#387 — #493</div>
-        </a>
-
-        <a class="gen-card" href="/json/gen5.json" target="_blank">
+        </button>
+        <button class="gen-card" onclick="toggleGen('gen5')">
           <div class="gen-card-num">GEN V</div>
           <div class="gen-card-name">Unova</div>
           <div class="gen-card-range">#494 — #649</div>
-        </a>
+        </button>
+      </div>
 
+      <!-- Panneau d'affichage -->
+      <div class="gen-panel" id="gen-panel" style="display:none;">
+        <div class="gen-panel-header">
+          <span id="gen-panel-title"></span>
+          <button class="gen-panel-close" onclick="closeGen()">✕</button>
+        </div>
+        <div class="gen-panel-content" id="gen-panel-content">
+          <div class="gen-loading">Chargement...</div>
+        </div>
       </div>
     </section>
 

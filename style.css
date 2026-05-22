@@ -548,50 +548,88 @@
     .main-content { padding: 20px 16px; }
     .infobox { float: none; width: 100%; margin: 0 0 16px 0; }
   }
-  .gen-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    margin-top: 16px;
-  }
-  
-  .gen-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 130px;
-    padding: 16px 12px;
-    border-radius: 10px;
-    border: 1px solid var(--border);
-    background: var(--bg-card, #f9f9f9);
-    text-decoration: none;
-    color: inherit;
-    transition: transform 0.15s, box-shadow 0.15s;
-    cursor: pointer;
-  }
-  
-  .gen-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
-    border-color: var(--accent, #e63946);
-  }
-  
-  .gen-card-num {
-    font-size: 0.7rem;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    color: var(--accent, #e63946);
-    margin-bottom: 4px;
-  }
-  
-  .gen-card-name {
-    font-size: 1rem;
-    font-weight: 600;
-  }
-  
-  .gen-card-range {
-    font-size: 0.75rem;
-    color: var(--text-muted, #888);
-    margin-top: 4px;
-  }
+/* Boutons gen */
+.gen-card {
+  background: var(--bg-card, #f9f9f9);
+  border: 1px solid var(--border);
+  cursor: pointer;
+  font-family: inherit;
+}
+.gen-card.active {
+  border-color: var(--accent, #e63946);
+  background: var(--accent-light, #fff0f0);
+}
+
+/* Panneau */
+.gen-panel {
+  margin-top: 20px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.gen-panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 16px;
+  background: var(--bg-header, #f0f0f0);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+.gen-panel-close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  color: var(--text-muted, #888);
+  padding: 0 4px;
+}
+.gen-panel-close:hover { color: var(--accent, #e63946); }
+
+.gen-panel-content {
+  max-height: 420px;
+  overflow-y: auto;
+  padding: 12px;
+}
+
+.gen-loading, .gen-error {
+  text-align: center;
+  padding: 24px;
+  color: var(--text-muted, #888);
+  font-size: 0.9rem;
+}
+
+/* Table pokémon */
+.pokemon-table td.poke-id {
+  color: var(--text-muted, #888);
+  font-family: monospace;
+  font-size: 0.85rem;
+}
+
+/* Badges de types */
+.type-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 20px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #fff;
+}
+.type-feu      { background: #e63946; }
+.type-eau      { background: #4a90d9; }
+.type-plante   { background: #4caf50; }
+.type-poison   { background: #9c27b0; }
+.type-normal   { background: #9e9e9e; }
+.type-vol      { background: #7986cb; }
+.type-insecte  { background: #8bc34a; }
+.type-roche    { background: #8d6e63; }
+.type-sol      { background: #ff8f00; }
+.type-combat   { background: #bf360c; }
+.type-psy      { background: #e91e63; }
+.type-glace    { background: #80deea; color: #333; }
+.type-dragon   { background: #3949ab; }
+.type-ténèbres { background: #37474f; }
+.type-acier    { background: #78909c; }
+.type-spectre  { background: #512da8; }
+.type-électrik { background: #fdd835; color: #333; }
+.type-fée      { background: #f48fb1; color: #333; }
