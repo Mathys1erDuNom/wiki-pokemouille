@@ -550,69 +550,70 @@
   }
 
   /* ── BOUTONS GEN ─────────────────────────────────── */
-.gen-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin: 14px 0;
-}
-
-.gen-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 130px;
-  padding: 14px 12px;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-top: 3px solid var(--accent2);
-  border-radius: 6px;
-  cursor: pointer;
-  font-family: inherit;
-  transition: 0.15s;
-  text-align: center;
-}
-
-.gen-card:hover {
-  background: var(--infobox-bg);
-  border-color: var(--accent2);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-}
-
-.gen-card.active {
-  background: #fdf0f0;
-  border-color: var(--accent);
-  border-top-color: var(--accent);
-}
-
-.gen-card-num {
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  color: var(--accent2);
-  margin-bottom: 4px;
-}
-
-.gen-card.active .gen-card-num {
-  color: var(--accent);
-}
-
-.gen-card-name {
-  font-size: 0.95rem;
-  font-weight: 700;
-  color: var(--text);
-  font-family: 'Lora', serif;
-}
-
-.gen-card-range {
-  font-size: 0.72rem;
-  color: var(--muted);
-  margin-top: 4px;
-  font-family: 'Source Code Pro', monospace;
-}
+  .gen-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 14px 0;
+  }
+  
+  .gen-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 130px;
+    padding: 14px 12px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-top: 3px solid var(--accent2);
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: inherit;
+    transition: transform 0.15s, box-shadow 0.15s, background 0.15s;
+    text-align: center;
+  }
+  
+  .gen-card:hover {
+    background: var(--infobox-bg);
+    border-top-color: var(--accent2);
+    border-color: var(--accent2);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(200,134,10,0.15);
+  }
+  
+  .gen-card.active {
+    background: var(--accent-light);
+    border-color: var(--accent);
+    border-top-color: var(--accent);
+  }
+  
+  .gen-card-num {
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--accent2);
+    margin-bottom: 4px;
+  }
+  
+  .gen-card.active .gen-card-num {
+    color: var(--accent);
+  }
+  
+  .gen-card-name {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text);
+    font-family: 'Lora', serif;
+  }
+  
+  .gen-card-range {
+    font-size: 0.72rem;
+    color: var(--muted);
+    margin-top: 4px;
+    font-family: 'Source Code Pro', monospace;
+  }
 
 /* ── PANNEAU ─────────────────────────────────────── */
 .gen-panel {
