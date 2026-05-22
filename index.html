@@ -363,49 +363,45 @@
 
 
     <!-- ── POKEMON ────────────────────────────────────── -->
-    <section id="pokemon" class="wiki-section">
-      <h2><span class="section-num">7</span> Pokémon par génération</h2>
-      <p>Consultez la liste complète des Pokémon disponibles par génération.</p>
+    <!-- ── ATTAQUES ───────────────────────────────────── -->
+    <section id="attaques" class="wiki-section">
+      <h2><span class="section-num">7</span> Attaques par génération</h2>
+      <p>Consultez la liste complète des attaques disponibles par génération.</p>
 
       <div class="gen-grid">
-        <button class="gen-card" onclick="toggleGen('gen1')">
+        <button class="gen-card" onclick="toggleAttaque('atk1')">
           <div class="gen-card-num">GEN I</div>
           <div class="gen-card-name">Kanto</div>
-          <div class="gen-card-range">#001 — #151</div>
         </button>
-        <button class="gen-card" onclick="toggleGen('gen2')">
+        <button class="gen-card" onclick="toggleAttaque('atk2')">
           <div class="gen-card-num">GEN II</div>
           <div class="gen-card-name">Johto</div>
-          <div class="gen-card-range">#152 — #251</div>
         </button>
-        <button class="gen-card" onclick="toggleGen('gen3')">
+        <button class="gen-card" onclick="toggleAttaque('atk3')">
           <div class="gen-card-num">GEN III</div>
           <div class="gen-card-name">Hoenn</div>
-          <div class="gen-card-range">#252 — #386</div>
         </button>
-        <button class="gen-card" onclick="toggleGen('gen4')">
+        <button class="gen-card" onclick="toggleAttaque('atk4')">
           <div class="gen-card-num">GEN IV</div>
           <div class="gen-card-name">Sinnoh</div>
-          <div class="gen-card-range">#387 — #493</div>
         </button>
-        <button class="gen-card" onclick="toggleGen('gen5')">
+        <button class="gen-card" onclick="toggleAttaque('atk5')">
           <div class="gen-card-num">GEN V</div>
           <div class="gen-card-name">Unova</div>
-          <div class="gen-card-range">#494 — #649</div>
         </button>
       </div>
 
-      <!-- Panneau d'affichage -->
-      <div class="gen-panel" id="gen-panel" style="display:none;">
+      <div class="gen-panel" id="atk-panel" style="display:none;">
         <div class="gen-panel-header">
-          <span id="gen-panel-title"></span>
-          <button class="gen-panel-close" onclick="closeGen()">✕</button>
+          <span id="atk-panel-title"></span>
+          <button class="gen-panel-close" onclick="closeAttaque()">✕</button>
         </div>
-        <div class="gen-panel-content" id="gen-panel-content">
+        <div class="gen-panel-content" id="atk-panel-content">
           <div class="gen-loading">Chargement...</div>
         </div>
       </div>
     </section>
+   
 
     <!-- ── COMMANDES ──────────────────────────────── -->
     <section id="commandes" class="wiki-section">
