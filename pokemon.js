@@ -141,9 +141,9 @@ const genMeta = {
     }
   
     const categoryIcon = {
-      physique: "⚔️",
-      special:  "✨",
-      statut:   "🔄",
+      physique: "",
+      special:  "",
+      statut:   "",
     };
   
     const rows = data.map(a => `
