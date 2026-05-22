@@ -1,9 +1,9 @@
 const genMeta = {
-    gen1: { label: "GEN I — Kanto",  file: "/json/gen1.json" },
-    gen2: { label: "GEN II — Johto", file: "/json/gen2.json" },
-    gen3: { label: "GEN III — Hoenn", file: "/json/gen3.json" },
-    gen4: { label: "GEN IV — Sinnoh", file: "/json/gen4.json" },
-    gen5: { label: "GEN V — Unova",  file: "/json/gen5.json" },
+    gen1: { label: "GEN I — Kanto",  file: "/json/pokemon_gen1_normal.json" },
+    gen2: { label: "GEN II — Johto", file: "/json/pokemon_gen2_normal.json" },
+    gen3: { label: "GEN III — Hoenn", file: "/json/pokemon_gen3_normal.json" },
+    gen4: { label: "GEN IV — Sinnoh", file: "/json/pokemon_gen4_normal.json" },
+    gen5: { label: "GEN V — Unys",  file: "/json/pokemon_gen5_normal.json" },
   };
   
   let currentGen = null;
