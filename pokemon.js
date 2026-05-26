@@ -4,6 +4,7 @@ const genMeta = {
     gen3: { label: "GEN III — Hoenn", file: "/json/pokemon_gen3_normal.json" },
     gen4: { label: "GEN IV — Sinnoh", file: "/json/pokemon_gen4_normal.json" },
     gen5: { label: "GEN V — Unys",  file: "/json/pokemon_gen5_normal.json" },
+    oeufs: { label: "oeufs",  file: "/json/oeuf.json" },
   };
 
   
