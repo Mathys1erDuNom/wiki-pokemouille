@@ -66,7 +66,7 @@ const genMeta = {
         <span title="Défense">Défense ${p.stats.defense}</span>
         <span title="Atk Spé">Attaque Spéciale ${p.stats.special_attack}</span>
         <span title="Déf Spé">Défense Spéciale ${p.stats.special_defense}</span>
-        <span title="Vitesse">| Vitesse ${p.stats.speed}</span>
+        <span title="Vitesse">Vitesse ${p.stats.speed}</span>
       `;
   
       return `
