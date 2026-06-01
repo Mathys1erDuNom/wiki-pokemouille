@@ -683,8 +683,8 @@
 }
 
 .poke-sprite {
-  width: 52px;
-  height: 52px;
+  width: 100px;
+  height: 100px;
   image-rendering: pixelated;
   display: block;
 }
