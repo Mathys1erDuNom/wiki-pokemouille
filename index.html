@@ -92,7 +92,7 @@
     <p>
       <b>PokéCroco Bot</b> est un bot Discord dédié à l'univers Pokémon. Lorsqu'un membre est connecté au
       salon vocal du serveur, des <b>événements</b> se déclenchent toutes les 25 minutes : apparitions de
-      Pokémon, quiz, devinettes, rencontres avec la famille Dupont ou apparitions du marché noir. 
+      Pokémon, quiz, devinettes, rencontres avec la famille Dupont ou apparition d'un vendeur du marché noir.
     </p>
 
     <div class="wiki-note">
@@ -310,12 +310,12 @@
       </div>
 
       <!-- Panneau d'affichage -->
-      <div class="gen-panel" id="eggs-panel" style="display:none;">
+      <div class="gen-panel" id="gen-panel" style="display:none;">
         <div class="gen-panel-header">
-          <span id="eggs-panel-title"></span>
-          <button class="gen-panel-close" onclick="closeEggs()">✕</button>
+          <span id="gen-panel-title"></span>
+          <button class="gen-panel-close" onclick="closeGen()">✕</button>
         </div>
-        <div class="gen-panel-content" id="eggs-panel-content">
+        <div class="gen-panel-content" id="gen-panel-content">
           <div class="gen-loading">Chargement...</div>
         </div>
       </div>
@@ -457,12 +457,12 @@
       </div>
 
       <!-- Panneau d'affichage -->
-      <div class="gen-panel" id="pokemon-gen-panel" style="display:none;">
+      <div class="gen-panel" id="gen-panel" style="display:none;">
         <div class="gen-panel-header">
-          <span id="pokemon-gen-panel-title"></span>
+          <span id="gen-panel-title"></span>
           <button class="gen-panel-close" onclick="closeGen()">✕</button>
         </div>
-        <div class="gen-panel-content" id="pokemon-gen-panel-content">
+        <div class="gen-panel-content" id="gen-panel-content">
           <div class="gen-loading">Chargement...</div>
         </div>
       </div>
