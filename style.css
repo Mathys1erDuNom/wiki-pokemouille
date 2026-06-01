@@ -682,9 +682,7 @@
   background: #e8deca;
 }
 
-.pokemon-table td {
-  padding: 12px 16px;
-}
+
 
 .poke-sprite {
   width: 200px;
@@ -701,6 +699,20 @@
   gap: 3px;
   font-size: 0.95rem;
   color: var(--muted);
+}
+
+.pokemon-table td {
+  padding: 12px 16px;
+  vertical-align: top; /* ou middle selon ton design */
+}
+
+.poke-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  font-size: 0.95rem;
+  color: var(--muted);
+
 }
 
 .poke-stats span { white-space: nowrap; }
