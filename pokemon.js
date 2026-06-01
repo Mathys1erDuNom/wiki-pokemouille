@@ -11,9 +11,14 @@ const genMeta = {
   let currentGen = null;
   
   async function toggleGen(genKey) {
-    const panel   = document.getElementById("gen-panel");
-    const title   = document.getElementById("gen-panel-title");
-    const content = document.getElementById("gen-panel-content");
+    const isEggs = genKey === 'oeufs';
+    const panelId = isEggs ? "eggs-panel" : "pokemon-gen-panel";
+    const titleId = isEggs ? "eggs-panel-title" : "pokemon-gen-panel-title";
+    const contentId = isEggs ? "eggs-panel-content" : "pokemon-gen-panel-content";
+    
+    const panel   = document.getElementById(panelId);
+    const title   = document.getElementById(titleId);
+    const content = document.getElementById(contentId);
   
     if (currentGen === genKey) {
       closeGen();
@@ -42,7 +47,14 @@ const genMeta = {
   }
   
   function closeGen() {
-    document.getElementById("gen-panel").style.display = "none";
+    const panelId = currentGen === 'oeufs' ? "eggs-panel" : "pokemon-gen-panel";
+    document.getElementById(panelId).style.display = "none";
+    document.querySelectorAll(".gen-card").forEach(c => c.classList.remove("active"));
+    currentGen = null;
+  }
+  
+  function closeEggs() {
+    document.getElementById("eggs-panel").style.display = "none";
     document.querySelectorAll(".gen-card").forEach(c => c.classList.remove("active"));
     currentGen = null;
   }
