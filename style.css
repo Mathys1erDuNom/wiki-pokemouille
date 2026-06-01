@@ -682,6 +682,10 @@
   background: #e8deca;
 }
 
+.pokemon-table td {
+  padding: 12px 16px;
+}
+
 .poke-sprite {
   width: 200px;
   height: 200px;
@@ -692,8 +696,8 @@
 .poke-stats {
   display: flex;
   flex-direction: column;
-  gap: 1px;
-  font-size: 0.76rem;
+  gap: 3px;
+  font-size: 0.95rem;
   color: var(--muted);
 }
 
